@@ -2,6 +2,6 @@ package model
 
 // A HealthzResponse expresses health check message.
 type HealthzResponse struct{
-	//   string 型で Message という名前の Field を定義
-	Message string
+	//   Message という Field が JSON にシリアライズされた時に message として出力されるように struct tag を追加
+	Message string `json:"message"`
 }
